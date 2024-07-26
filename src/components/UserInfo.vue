@@ -1,19 +1,3 @@
-<template>
-    <div class="user-info">
-      <h2>Informações do Usuário</h2>
-      <p><strong>Nome:</strong> {{ user.nome }}</p>
-      <p><strong>E-mail:</strong> {{ user.email }}</p>
-      <p><strong>Data de Nascimento:</strong> {{ user.nascimento }}</p>
-      <p><strong>Idade:</strong> {{ user.idade }}</p>
-      <p><strong>Estado:</strong> {{ estadoName }}</p>
-      <p><strong>Cidade:</strong> {{ user.cidade }}</p>
-      <p><strong>Endereço:</strong> {{ user.endereco }}</p>
-      <p><strong>Hobbies:</strong> {{ user.hobbies.join(', ') }}</p>
-      <p><strong>Linguagens:</strong> {{ user.linguagens.join(', ') }}</p>
-      <p><strong>Biografia:</strong> {{ user.biografia }}</p>
-    </div>
-  </template>
-  
   <script setup>
   import { computed } from 'vue'
   import { defineProps } from 'vue'
@@ -57,8 +41,24 @@
     return estado ? estado.name : 'Desconhecido'
   })
   </script>
+
+<template>
+  <div class="user-info">
+    <h2>Informações do Usuário</h2>
+    <p><strong>Nome:</strong> {{ user.nome }}</p>
+    <p><strong>E-mail:</strong> {{ user.email }}</p>
+    <p><strong>Data de Nascimento:</strong> {{ user.nascimento }}</p>
+    <p><strong>Idade:</strong> {{ user.idade }}</p>
+    <p><strong>Estado:</strong> {{ estadoName }}</p>
+    <p><strong>Cidade:</strong> {{ user.cidade }}</p>
+    <p><strong>Endereço:</strong> {{ user.endereco }}</p>
+    <p><strong>Hobbies:</strong> {{ user.hobbies.join(', ') }}</p>
+    <p><strong>Linguagens:</strong> {{ user.linguagens.join(', ') }}</p>
+    <p><strong>Biografia:</strong> {{ user.biografia }}</p>
+  </div>
+</template>
   
-  <style>
+  <style scoped>
 .user-info {
   max-width: 900px;
   margin: 30px auto;

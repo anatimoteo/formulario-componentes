@@ -1,12 +1,3 @@
-<template>
-  <div class="app">
-    <button @click="toggleForm">{{ showForm ? 'Mostrar Informações' : 'Mostrar Formulário' }}</button>
-    
-    <UserForm v-if="showForm" :user="user" @update-user="updateUser" />
-    <UserInfo v-else :user="user" />
-  </div>
-</template>
-
 <script setup>
 import { ref, reactive } from 'vue'
 import UserForm from './components/UserForm.vue'
@@ -81,7 +72,15 @@ function updateUser(updatedUser) {
 }
 </script>
 
-<style>
+<template>
+  <div class="app">    
+    <UserForm v-if="showForm" :user="user" @update-user="updateUser" />
+    <UserInfo v-else :user="user" />
+    <button @click="toggleForm">{{ showForm ? 'Mostrar Informações' : 'Mostrar Formulário' }}</button>
+  </div>
+</template>
+
+<style scoped>
 .app {
   font-family: Arial, sans-serif;
   text-align: center;
