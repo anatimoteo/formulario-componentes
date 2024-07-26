@@ -1,7 +1,7 @@
 <script setup>
 import { ref, reactive } from 'vue'
-import UserForm from './components/UserForm.vue'
-import UserInfo from './components/UserInfo.vue'
+import UserForm from './components/DadosUsuario.vue'
+import UserInfo from './components/ExibirDados.vue'
 
 const estados = [
   { sigla: 'AC', name: 'Acre' },
