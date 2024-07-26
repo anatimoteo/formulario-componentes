@@ -58,7 +58,7 @@
   </div>
 </template>
   
-  <style scoped>
+<style scoped>
 .user-info {
   max-width: 900px;
   margin: 30px auto;
