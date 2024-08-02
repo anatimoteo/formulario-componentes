@@ -41,7 +41,7 @@ function voltarParaFormulario() {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 130vh;
+  height: 160vh;
 
 }
 </style>
